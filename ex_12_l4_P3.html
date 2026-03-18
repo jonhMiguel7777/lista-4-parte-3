@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Digite um número maior que zero <input type="text" id="input_n1"></p>
+    <button onclick="calcular()">Ver se é multiplo de 5</button>
+    <div id="mensagem"></div>
+
+    <script>
+        let n1 = Number(input_n1.value);
+        let resto = n1 % 5;
+        
+        function calcular(){
+            if(resto == 0){
+                mensagem.innerHTML = `Perfeito, esse número é múltiplo de cinco!`;
+            }else if (resto == 1){
+                mensagem.innerHTML = `Vich, sobrou um`;
+            }else if (resto == 2){
+                mensagem.innerHTML = `Para esse o resto é dois`;
+            }else if (resto == 3){
+                mensagem.innerHTML = `Com mais dois daria certo`;
+            }else if(resto == 4){
+                mensagem.innerHTML = `Só faltou 1 para ser múltiplo de 5`;
+            }
+
+
+            if(n1 < 0 ){
+                alert("numero menor que zero")
+            }
+        }
+    </script>
+</body>
+</html>

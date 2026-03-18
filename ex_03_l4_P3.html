@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>qual sua temperatura atual? <input type="text" id="input_temp"></p>
+    <button onclick="temperatura()">Ver estado</button>
+    <div id="mensagem"></div>
+
+    <script>
+        let temp = Number(input_temp.value);
+
+        function temperatura(){
+            if(temp <= 14){
+                mensagem.innerHTML = `Congelante`;
+            }else if(temp <= 21){
+                mensagem.innerHTML = `Com Frio`;
+            }else if (temp <= 31){
+                mensagem.innerHTML = `Com Calor`;
+            }else if(temp > 31){
+                mensagem.innerHTML = `Calor Incessante`;
+            }
+        }
+    </script>
+</body>
+</html>

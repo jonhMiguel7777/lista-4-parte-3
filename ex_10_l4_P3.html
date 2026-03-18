@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>qual velocidade você estava dirigindo? <input type="text" id="input_velocidade"></p>
+    <p>qual o limiete de velocidade da via? <input type="text" id="input_velocidade_via"></p>
+    <button onclick="verificar()">verificar</button>
+    <div id="mensagem"></div>
+
+
+    <script>
+        function verificar(){
+        let velocidade = Number(input_velocidade.value);
+        let velocidade_via = Number(input_velocidade_via.value);
+        let percentual = ((velocidade - velocidade_via) / velocidade_via) * 100;
+
+            if(velocidade <= velocidade_via){
+                mensagem.innerHTML = `Velocidade dentro do limite. Boa direção!`;
+            }else if(percentual <= 20){
+                mensagem.innerHTML = `Atenção! Excedendo o limite permitido.`;
+            }else if(percentual > 20){
+                mensagem.innerHTML = `Multa grave! Velocidade muito acima do permitido.`;
+            }
+        }
+    </script>
+</body>
+</html>

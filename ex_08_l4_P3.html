@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Qual sua meta de econômia? <input type="text" id="input_meta"></p>
+    <p>quanto você tem guardado? <input type="text" id="input_saldo"></p>
+    <button onclick="analise()">Analisar Econômia</button>
+    <div id="mensagem"></div>
+
+    <script>
+        let meta = Number(input_meta.value);
+        let saldo = Number(input_saldo.value);
+        let diferenca = meta - saldo
+
+        function analise(){
+            if(meta == saldo){
+                mensagem.innerHTML = `Parabéns, meta alcançada!`
+            }else if (meta < saldo){
+                mensagem.innerHTML = `Meta ultrapassada em ${diferenca}`
+            }else if (meta > saldo){
+                mensagem.innerHTML = `Força! Ainda em busca da meta! Falta ${diferenca}`
+            }
+        }
+    </script>
+</body>
+</html>

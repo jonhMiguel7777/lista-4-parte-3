@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>digite qual o seu time <input type="text" id="input_time"></p>
+    <button onclick="canto()">ver canto</button>
+    <div id="mensagem"></div>
+    <span style="color: white; background-color: black;">Salve o Corinthians</span>
+
+
+    <script>
+        let time = input_time.value;
+
+        if(time == "Corinthians"){
+            mensagem.innerHTML = `<span style="color: white; background-color: black;">Salve o Corinthians</span>`
+        }else if (time == "Palmeiras"){
+            mensagem.innerHTML = `<span style="color: white; background-color: green;">Salve o alviverde imponente"</span>`
+        }else if (time == "Santos"){
+            mensagem.innerHTML = `<span>Agora quem dá a bola é o Santos"</span>`
+        }else if (time == "São Paulo"){
+            mensagem.innerHTML = `<span style="color: red; background-color: black;">Salve o alviverde imponente"</span>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Escolha seu inicial da primeira geração (obs só são permitidos os pokemons: Charmander, Squirtle e Bulbasaur) <input type="text" id="input_pokemon"></p>
+    <button onclick="escolha()">Escolher Pokemon</button>
+    <div id="mensagem"></div>
+   
+
+    <script>
+        function escolha(){
+            let pokemon = input_pokemon.value;
+
+            if(pokemon == "Charmander"){
+                mensagem.innerHTML = `<p>Aqui está o seu Charmander  <img style="width: 300px; height:300px;" src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2019/11/pokemon-charmander.jpg?w=1200&h=675&fit=crop"></p>`;
+            }else if(pokemon == "Squirtle"){
+                mensagem.innerHTML = `<p>Aqui está o seu Squirtle<img style="width: 300px; height:300px;" src="https://www.nicelembrancinhas.com.br/image/cache/catalog/POKEMON/POKEMON-SQUIRTLE-650x650.jpeg"></p>`;
+            }else if(pokemon == "Bulbasaur"){
+                mensagem.innerHTML = `<p>Aqui está o seu Bulbassaur<img style="width: 300px; height:300px;" src="https://archives.bulbagarden.net/media/upload/thumb/f/fb/0001Bulbasaur.png/800px-0001Bulbasaur.png"></p>`;
+            }else{
+                mensagem.innerHTML = `<p>Pokemon inválido</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

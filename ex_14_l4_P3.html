@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p>Como você está se sentindo hoje? <select id="select_humor">
+            <option value="">-- Selecione --</option>
+            <option value="feliz">Feliz</option>
+            <option value="triste">Triste</option>
+            <option value="bravo">Bravo</option>
+            <option value="surpreso">Surpreso</option>
+            <option value="cansado">Cansado</option>
+        </select></p>
+        <button onclick="escolha()">Mostrar Humor</button>
+        <div id="mensagem"></div>
+
+        <script>
+            function escolha(){
+                let humor = select_humor.value;
+
+                if(humor == "feliz"){
+                    mensagem.innerHTML = `<img style="width: 300px; height:300px;" src="https://img.freepik.com/vetores-premium/emoji-radiante-com-olhos-sorridentes-emoticon-sorridente-com-sorriso-radiante_686498-2681.jpg?semt=ais_hybrid&w=740&q=80">`;
+                }else if (humor == "triste"){   
+                    mensagem.innerHTML = `<img style="width: 300px; height:300px;" src="https://img.freepik.com/vetores-premium/emoticon-de-alta-qualidade-emoji-chorando-alto-emoticon-amarelo-com-rios-de-lagrimas-elementos-de-bate-papo-populares_686498-2693.jpg?semt=ais_hybrid&w=740&q=80">`;
+                }else if (humor == "bravo"){   
+                    mensagem.innerHTML = `<img style="width: 300px; height:300px;" src="https://e7.pngegg.com/pngimages/666/250/png-clipart-angry-emoji-illustration-emoji-anger-emoticon-iphone-angry-emoji-orange-computer-wallpaper-thumbnail.png">`;
+                }else if (humor == "surpreso"){   
+                    mensagem.innerHTML = `<img style="width: 300px; height:300px;" src="https://img.freepik.com/vetores-premium/emoticon-de-alta-qualidade-emoji-surpreso-emoticon-chocado-com-rosto-ofegante-emoji-de-rosto-amarelo-elemento-popular_686498-2731.jpg?semt=ais_hybrid&w=740&q=80">`;
+                }else if (humor == "cansado"){   
+                    mensagem.innerHTML = `<img style="width: 300px; height:300px;" src="https://i.pinimg.com/736x/85/29/56/85295619ea201a2853b6f218300e2b6d.jpg">`;
+                }else{
+                    mensagem.innerHTML = ``;
+                }
+            }
+        </script>
+    </body>
+    </html>
+</body>
+</html>

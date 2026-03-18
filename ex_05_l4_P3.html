@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>digite aqui a nota do aluno <input type="text" id="input_nota"></p>
+    <button onclick="verificar()">verificar nota</button>
+    <div id="mensagem"></div>
+
+    <script>
+        let nota = Number(input_nota.value);
+
+        if(nota < 5){
+            alert(`aluno precisa de ajuda`);
+        }else if (nota <= 7){
+            alert(`aluno na média`);
+        }else if (nota <= 9.5){
+            alert(`aluno acima da média`);
+        }else{
+            alert(`aluno fora da curva`);
+        }
+    </script>
+</body>
+</html>
